@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
+</head>
+
+<body>
+  <h1>Formulaire exercice 2</h1>
+
+  <form action="traitement.php" method="post">
+    <label for="msg">Message à afficher :</label>
+    <input type="text" name="msg" id="msg" size="25">
+  </form>
+
+  <script>
+
+    var texte = document.getElementById("msg");
+    texte.value = "Vous avez réussi votre exercice";
+
+  </script>
+
+</body>
+
+</html>
