@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 6</title>
+</head>
+
+<body>
+  <script>
+
+    function Chercher_nombre(num) {
+
+      var Nombre = prompt("Saisir un nombre entre 1 et 10 :")
+      var Compteur = 1
+
+      while (Nombre != num) {
+        Compteur += +1
+        if (Nombre > num) {
+          alert("Plus petit !")
+          var Nombre = prompt("Saisir un nombre entre 1 et 10 :")
+
+        } else {
+          alert("Plus grand !")
+          var Nombre = prompt("Saisir un nombre entre 1 et 10 :")
+
+        }
+      }
+      console.log('vous avez essayé ', Compteur)
+
+    }
+
+
+    const num = Math.floor(Math.random() * 10)
+    console.log(num);
+
+    Chercher_nombre(num)
+  </script>
+
+</body>
+
+</html>
