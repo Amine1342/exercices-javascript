@@ -9,13 +9,15 @@
 
 <body>
 
-  <h1>A remplir absoulment</h1>
+  <script>
+    var texte = prompt("Veuillez remplir le formulaire :") || ''
+    while (texte.length == 0) {
+      alert("Erreur, tu n'as pas remplis le formulaire !")
+      var texte = prompt("Veuillez remplir le formulaire :")
+    }
+    alert("Formulaire envoyé")
 
-  <form method="post" action="formulaire.php">
-    <label for="msg">Message :</label>
-    <input type="text" id="message" name="message" value="" size="25" required="required">
-    <input type="submit" value="Envoyer">
-  </form>
+  </script>
 
 </body>
 
