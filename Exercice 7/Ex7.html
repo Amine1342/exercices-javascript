@@ -10,14 +10,39 @@
 <body>
 
   <script>
-    function member(id, name, grade) {
-      this.identifiant = id;
-      this.nom = name;
-      this.grade = grade;
-      id: function affiche() {
 
-      }
+    function Member(id, name, grade) {
+      this.id = id;
+      this.name = name;
+      this.grade = grade;
+      this.toString = function () {
+        return "Identifiant : " + this.id +
+          "\nPrénom : " + this.name +
+          "\nGrade : " + this.grade;
+      };
     }
+
+    function Team() {
+      this.members = [];
+
+      this.addMember = function (member) {
+        this.members.push(member);
+      };
+    }
+
+    var myTeam = new Team();
+
+    var member1 = new Member(1, "Wajdi", "A");
+    var member2 = new Member(2, "Amine", "B");
+    var member3 = new Member(3, "Yousri", "D");
+
+    myTeam.addMember(member1);
+    myTeam.addMember(member2);
+    myTeam.addMember(member3);
+
+    console.log(myTeam.members);
+
+
   </script>
 
 </body>
