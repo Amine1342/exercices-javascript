@@ -10,11 +10,46 @@
 <body>
 
   <script>
-    function Salaire_net(Sb) {
 
+    let Sb = Number(prompt("Saisir votre salaire brut :"))
+
+    let Bonus = Number(prompt("Saisir le bonus ou l'allocation que vous touchez (100$ ou 150$) :"));
+
+    while (Bonus !== 100 && Bonus !== 150) {
+      Bonus = Number(prompt("Le bonus est de 100$ et l'allocation est de 150$ :"));
     }
 
-    let Sb = prompt("Saisir votre salaire brut :")
+    let Sexe = prompt("Saisir votre sexe :");
+
+    while (Sexe.toLowerCase() !== "femme" && Sexe.toLowerCase() !== "homme" && Sexe.toLowerCase() !== "f" && Sexe.toLowerCase() !== "h") {
+      Sexe = prompt("Saisir votre sexe correctement :");
+    }
+
+    let Charge = Number(prompt("Saisir le nombre de personnes à votre charge (3 ou 4) :"))
+
+    while (Charge !== 3 && Charge !== 4) {
+      Charge = prompt("Le nombre doit être 3 ou 4 :");
+    }
+
+    let impot = 0.18;
+    let assurance = 0.07;
+    let pension = 0.05;
+
+    let reduction = 0;
+
+    if (Sexe.toLowerCase() !== "femme" || Sexe.toLowerCase() !== "f") {
+      reduction += 0.02;
+    }
+
+    if (Charge = 3) {
+      reduction += 0.01
+    } else if (Charge = 4) {
+      reduction += 0.02
+    }
+
+    let SalaireNet = Sb * (1 - (impot + assurance + pension)) + Bonus;
+
+    alert("Votre salaire Net est de :" + SalaireNet + "$")
 
   </script>
 
